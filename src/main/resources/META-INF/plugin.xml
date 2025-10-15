@@ -6,8 +6,16 @@
     <vendor url="https://github.com/UnDeCary">ZLUP</vendor>
 
     <description><![CDATA[
-        You can use this plugin to create comment sections
+    <p>Comment Sections is a lightweight JetBrains plugin to create stylish, structured comment sections in your code.</p>
+    <ul>
+        <li><b>Single Line Comment:</b> Type <code>cmts &lt;text&gt;</code> or press <b>Ctrl+Alt+C</b></li>
+        <li><b>Multi Line Comment:</b> Type <code>cmtm &lt;text&gt;</code> or press <b>Ctrl+Alt+N</b></li>
+        <li>Customizable hotkeys via IDE Keymap settings</li>
+        <li>Customizable comment symbols in plugin settings</li>
+    </ul>
+    <p>Perfect for making your code readable, organized, and visually appealing.</p>
     ]]></description>
+
 
     <actions>
         <action
