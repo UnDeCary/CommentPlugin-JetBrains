@@ -1,0 +1,39 @@
+<idea-plugin>
+    <id>com.zlup.CommentSectionPlugin</id>
+
+    <name>Comment Sections</name>
+
+    <vendor url="https://github.com/UnDeCary">ZLUP</vendor>
+
+    <description><![CDATA[
+        You can use this plugin to create comment sections
+    ]]></description>
+
+    <actions>
+        <action
+            id="CommentSections.CreateSingleLineComment"
+            class="com.zlup.commentsections.CreateSingleLineCommentAction"
+            text="Create Single-Line Comment Section"
+            description="Create Single-Line comment section">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C"/>
+        </action>
+
+        <action
+                id="CommentSections.CreateMultiLineComment"
+                class="com.zlup.commentsections.CreateMultiLineCommentAction"
+                text="Create Multi-Line Comment Section"
+                description="Create Multi-Line comment section">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt N"/>
+        </action>
+    </actions>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <enterHandlerDelegate implementation="com.zlup.commentsections.CommentCommandHandler"/>
+        <applicationService serviceImplementation="com.zlup.commentsections.CommentSettings"/>
+        <projectConfigurable instance="com.zlup.commentsections.CommentSettingsConfigurable"/>
+    </extensions>
+</idea-plugin>
