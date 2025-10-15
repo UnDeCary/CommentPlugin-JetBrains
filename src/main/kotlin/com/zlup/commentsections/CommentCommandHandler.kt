@@ -62,7 +62,7 @@ class CommentCommandHandler : EnterHandlerDelegate {
             document.replaceString(lineStart, lineEnd, comment)
         }
         else if (lineText.startsWith("cmtm ")) {
-            val text = lineText.removePrefix("cmts").trim()
+            val text = lineText.removePrefix("cmtm ").trim()
 
             val padSize = (totalWidth - text.length - 2).coerceAtLeast(0)
 
